@@ -46,18 +46,19 @@ h1, p {
 
 #watthai.wat {
     position: relative;
-    min-width: 20%;
-    flex-shrink: 0;
+    min-width: 300px;
+    max-width: 300px;
+    height: 300px;  /* Set fixed height for cropping */
+    overflow: hidden;
     background-color: transparent;
     text-align: center;
-    overflow: hidden;
 }
 
 #imagewatthai.imagewatthai2 {
     width: 100%;
-    height: 500px;
-    object-fit: cover;
-    filter: blur(1px);
+    height: 100%;
+    object-fit: cover; /* Ensures the image is cropped and fills the container */
+    object-position: center; /* Centers the image */
 }
 
 #watthai.wat p {
@@ -72,6 +73,7 @@ h1, p {
     text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
     z-index: 1;
 }
+
 
 .autoplay-controls {
     display: none;
