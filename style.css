@@ -1,0 +1,88 @@
+/* รีเซ็ต Margin และ Padding */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    height: 100%;
+    font-family: Arial, sans-serif;
+}
+
+/* พื้นหลังเต็มหน้าเว็บ */
+body {
+    background: url('images/background.jpg') no-repeat center center fixed;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+    color: #333;
+}
+
+/* Container หลัก */
+#temple.templeall {
+    padding: 20px;
+    background-color: transparent; /* เอากรอบสีขาวออก */
+    border-radius: 10px;
+    width: 90%;
+    max-width: 1200px;
+    margin-bottom: 20px;
+    box-shadow: none; /* เอาเงาออก */
+}
+
+/* จัดข้อความตรงกลาง */
+h1, p {
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+/* ปรับ Grid Container ให้แสดงแค่ 4 รายการ */
+/* เพิ่มระยะห่างระหว่างรูป */
+.wat-container {
+    display: flex;
+    gap: 20px; /* ระยะห่างระหว่าง Container */
+    overflow: hidden;
+    width: 100%;
+    max-width: 1200px;
+    margin: auto;
+}
+
+/* ไอเท็มภายใน Container */
+#watthai.wat {
+    position: relative;
+    min-width: 20%; /* ปรับให้ไอเท็มมีความกว้างเล็กลง */
+    flex-shrink: 0;
+    background-color: transparent; /* ลบพื้นหลังสีขาว */
+    text-align: center;
+    overflow: hidden;
+}
+
+/* แสดงรูปภาพในแนวตั้ง */
+#imagewatthai.imagewatthai2 {
+    width: 100%;
+    height: 500px; /* เพิ่มความสูงให้รูปยาวขึ้น */
+    object-fit: cover; /* ให้รูปตัดส่วนเกินและพอดีกับพื้นที่ */
+    filter: blur(1px); /* เบลอภาพเพื่อให้ข้อความเด่นชัดขึ้น */
+}
+
+/* ข้อความให้อยู่ตรงกลางรูปภาพ */
+#watthai.wat p {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    margin: 0;
+    font-size: 18px;
+    font-weight: bold;
+    color: #fff;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+    z-index: 1;
+}
+
+/* ปุ่มควบคุม */
+.autoplay-controls {
+    display: none; /* ซ่อนปุ่มควบคุม */
+}
